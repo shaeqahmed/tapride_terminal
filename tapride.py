@@ -28,7 +28,7 @@ print("   #    ###### #####  #   #   # #    # #      ")
 print("   #    #    # #      #    #  # #    # #      ")
 print("   #    #    # #      #     # # #####  ######\n ")
 
-chromedriver = "<INSERT PATH TO CHROMEDRIVER EXECUTABLE"
+chromedriver = "<INSERT PATH TO CHROMEDRIVER EXECUTABLE>"
 os.environ["webdriver.chrome.driver"] = chromedriver
 chrome_options = Options()  
 chrome_options.add_argument("--headless")  
@@ -74,7 +74,8 @@ for i in range(3):
     order = driver.find_element_by_xpath('//*[@id="ride-wrapper"]/div[8]/div/div[6]/div[2]/button')
     order.click()
     order = driver.find_element_by_xpath('//*[@id="ride-wrapper"]/div[9]/div/div[7]/div[2]/button')
-    print("\n"+order.text)# order.click()
+    print("\n"+order.text+" DONE") 
+    order.click()
     driver.quit()
     break
   except:
